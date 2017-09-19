@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick List</title>
+    <!-- Reset Style Sheet -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- JQuery - Needed for Bootstrap JS Plugins-->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<!-- links Angular app and controller -->
+<body ng-app="taskApp" ng-controller="appCtrl">
+
+    <div class="container">
+
+        <!-- navbar -->
+        <div class="navbar navbar-default navbar-fixed-top thin-shadowed">
+            <div class="navbar-header col-sm-12">
+                <span class="h2" class="navbar-brand"> Quick List </span> 
+            </div> 
+        </div>
+
+        <!-- list header -->
+        <header>
+            <h1> My Tasks </h1>
+        </header>
+
+        <!-- task form -->
+        <div class="row">
+            <div class="col-md-10">
+
+                <!-- insert task form -->
+                <form ng-submit="addItem()">
+                    <div class="row">
+
+                        <!-- task input -->
+                        <div class="col-md-11">
+                            <input id="taskInput" type="text" ng-model="taskInput" placeholder="Enter Task Here">
+                        </div>
+
+                        <!-- insert task button -->
+                        <div class="col-md-1">
+                            <button id="insertBtn" type="submit" class="blueBtn btn btn-default btn-block"> 
+                                Insert
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="clearBtn">
+                    <input ng-click="deleteCompleted()" type="submit" value="Delete Completed Tasks" class="blueBtn button">
+                </div>
+            </div>
+        </div>
+
+        <!-- task list -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- list item -->
+                <div class="listItem" ng-repeat="item in taskList">
+                    <div class="row">
+
+                        <div class="col-md-2">
+
+                            <!-- delete item icon -->
+                            <a id="trashIcon" href="#" ng-click="removeItem(item)" ng-model="item.done" >
+                                <span class="glyphicon glyphicon-trash"></span>  
+                            </a>
+
+                            <!-- completed item checkbox -->
+                            <input ng-model="item.completed" type="checkbox" value="false" id="checkbox" name="check">
+
+                        </div>
+
+                        <!-- item text -->
+                        <div class="col-md-10">
+                            <span class="itemText" ng-bind="item.taskText" ng-class="{'thirdItem': !(($index + 1) % 3), 'itemComplete':item.completed}"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> <!-- ends container -->
+
+    <footer> Copyright &copy;2017 Maria Wong </footer>
+
+    
+    <!-- Bootstrap JS -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+    
+</body>
+</html>
+

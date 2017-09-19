@@ -1,0 +1,123 @@
+ html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 70px;
+            background: #138BFF; 
+        }
+
+        .navbar-fixed-top {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+            background-color: #00488D;
+            color: #ffffff;
+            border: solid 2px #00376C;
+        }
+
+        .container{
+            width: 50%;
+            min-height: 500px;
+            margin: 100px auto 100px auto;
+            background: #AAD5FF; 
+            border: 2px solid #00376C; 
+            border-radius: 10px; 
+            box-shadow: 6px 6px 12px #00376C; 
+            padding-bottom: 25px;
+        }
+
+        header {  
+            text-align: center;
+            color: #138BFF; 
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        #taskInput {
+            height: 40px !important;
+            padding-left: 10px;
+            background-color: #E2F1FF;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+
+        input {
+            width: 100%;
+            outline-style: none;
+        }
+
+        .blueBtn {
+            background: #138BFF; 
+            border: 2px solid #135BFF; 
+            color: #ffffff;
+            box-shadow: 3px 3px 5px #00376C; 
+            outline-style: none;
+        }
+
+        #insertBtn {
+            width: 100px;
+        }
+
+        .blueBtn:hover{
+            border: 1px solid #00376C; 
+            color: #ffffff; 
+            background:#00488D; 
+        }
+
+        #trashIcon {
+            padding: 0 0 0 50px;
+            font-size: 17px;
+        }
+
+        .itemText {
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        .thirdItem {
+            color: red !important;
+        }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            margin-left: 15px;
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            background-color: #E2F1FF;
+        }
+
+        input[type="checkbox"]:checked {
+            background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/6156-200.png);
+            background-size: 100%;
+        }
+
+        .itemComplete {
+            text-decoration: line-through;
+        }
+
+        #clearBtn {
+            width: 170px;
+            margin: 0 auto !important;
+            margin-bottom: 20px !important;
+            background:#138BFF; 
+            border: 2px solid #135BFF; 
+            color: #ffffff;
+            box-shadow: 3px 3px 5px #00376C; 
+            outline-style: none;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            height: 70px;
+            width: 100%;
+            text-align: center;
+            color: #ffffff; 
+            padding-top: 25px;
+            border: solid 2px #00376C;
+            background-color: #00488D; 
+        }
