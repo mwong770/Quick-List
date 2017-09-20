@@ -1,3 +1,3 @@
 # Quick-List
 
-This application is currently under development.
+This Angular.js application is currently under development.
