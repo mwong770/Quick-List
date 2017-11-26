@@ -1,19 +1,19 @@
-var app = angular.module("taskApp", []); 
+    var app = angular.module("taskApp", []); 
 
     app.controller("appCtrl", function($scope) {
 
         // array of tasks with seed data
         $scope.taskList = [
-                                {taskText:"Take a Quiz", done:false, completed: false},
-                                {taskText:"Buy Shirts", done:false, completed: false},
-                                {taskText:"Send Email", done:false, completed: false},
-                                {taskText:"Learn More Angular", done:false, completed: false}
+                                {task:"Take a Quiz", done:false, completed:false},
+                                {task:"Buy Shirts", done:false, completed:false},
+                                {task:"Send Email", done:false, completed:false},
+                                {task:"Learn More Angular", done:false, completed:false}
                           ];
 
         // adds items to list
         $scope.addItem = function() {
             if ($scope.taskInput !== "" && $scope.taskInput !== undefined) {
-                $scope.taskList.push({taskText:$scope.taskInput, done:false, completed: false});
+                $scope.taskList.push({task:$scope.taskInput, done:false, completed: false});
                 $scope.taskInput = "";
             }
         };

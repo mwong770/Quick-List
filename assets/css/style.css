@@ -1,4 +1,4 @@
- html {
+        html {
             position: relative;
             min-height: 100%;
         }
@@ -16,7 +16,7 @@
             border: solid 2px #00376C;
         }
 
-        .container{
+        .container {
             width: 50%;
             min-height: 500px;
             margin: 100px auto 100px auto;
@@ -59,6 +59,7 @@
 
         #insertBtn {
             width: 100px;
+            margin-left: 10px;
         }
 
         .blueBtn:hover{
@@ -68,13 +69,15 @@
         }
 
         #trashIcon {
-            padding: 0 0 0 50px;
+            margin-left: 50px;
             font-size: 17px;
         }
 
         .itemText {
             font-size: 18px;
-            margin-left: 20px;
+            margin-left: 23px;
+            width: 75%;
+            overflow: scroll;
         }
 
         .thirdItem {
