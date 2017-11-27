@@ -1,3 +1,7 @@
+(function() {
+
+    'use strict'
+
     var app = angular.module("taskApp", []); 
 
     app.controller("appCtrl", function($scope) {
@@ -32,3 +36,5 @@
         };
 
     });
+
+})();
