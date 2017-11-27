@@ -4,11 +4,11 @@
 
         // array of tasks with seed data
         $scope.taskList = [
-                                {task:"Take a Quiz", done:false, completed:false},
-                                {task:"Buy Shirts", done:false, completed:false},
-                                {task:"Send Email", done:false, completed:false},
-                                {task:"Learn More Angular", done:false, completed:false}
-                          ];
+            {task:"Take a Quiz", done:false, completed:false},
+            {task:"Buy Shirts", done:false, completed:false},
+            {task:"Send Email", done:false, completed:false},
+            {task:"Learn More Angular", done:false, completed:false}
+        ];
 
         // adds items to list
         $scope.addItem = function() {

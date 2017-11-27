@@ -71,18 +71,19 @@
                         <div class="col-md-2">
 
                             <!-- delete item icon -->
-                            <a id="trashIcon" href="#" ng-click="removeItem(item)" ng-model="item.done" >
+                            <a id="trashIcon" href="#" ng-click="removeItem(item)">
                                 <span class="glyphicon glyphicon-trash"></span>  
                             </a>
 
                             <!-- completed item checkbox -->
-                            <input ng-model="item.completed" type="checkbox" value="false" id="checkbox" name="check">
+                            <input ng-model="item.completed" type="checkbox" id="checkbox">
 
                         </div>
 
                         <!-- item text -->
                         <div class="col-md-10 itemText">
-                            <div ng-bind="item.task" ng-class="{'thirdItem': !(($index + 1) % 3), 'itemComplete':item.completed}"></div>
+                            <!-- don't need ngCloak b/c using ng-bind instead of {{}} -->
+                            <div ng-bind="item.task" ng-class="{thirdItem: !(($index + 1) % 3), itemComplete: item.completed}"></div>
                         </div>
 
                     </div>
